@@ -83,3 +83,37 @@ Et Server Latency = 69ms
    - Vérifier la configuration réseau
    - Examiner les ressources client (CPU, mémoire) [[2](https://techcommunity.microsoft.com/blog/azurepaasblog/how-to-isolate-latency-issue-for-azure-storage-account/1430656)]
    - Considérer la co-localisation dans la même région Azure
+
+
+## 3. Système d'Alertes et Monitoring
+
+### Configuration des Alertes
+
+#### Groupes d'Action
+- **Email Alerts (Gravité 0-3)**
+  - Critique (0)
+  - Erreur (1)
+  - Avertissement (2)
+  - Informatif (3)
+
+- **SMS Alerts (Gravité 4-5)**
+  - Commentaires (4)
+
+#### Alertes Configurées
+1. **Alerte Data Lake - Volume**
+   - Type : Email
+   - Déclencheur : Upload > 1GB
+   - Objectif : Surveillance des transferts volumineux
+   - Gravité : 2 (Avertissement)
+
+2. **Alerte Data Lake - Sécurité**
+   - Type : SMS
+   - Déclencheur : Modification des clés d'accès
+   - Objectif : Sécurité et contrôle d'accès
+   - Gravité : 4 (Commentaires)
+
+### Bonnes Pratiques d'Alertes
+1. Hiérarchisation des notifications par gravité
+2. Séparation des canaux de communication (SMS/Email) selon l'urgence
+3. Documentation des seuils et des actions requises
+4. Révision périodique des paramètres d'alerte
