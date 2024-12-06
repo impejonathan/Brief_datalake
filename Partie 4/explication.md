@@ -94,9 +94,9 @@ Et Server Latency = 69ms
   - Critique (0)
   - Erreur (1)
   - Avertissement (2)
-  - Informatif (3)
 
 - **SMS Alerts (Gravité 4-5)**
+  - Informatif (3)
   - Commentaires (4)
 
 #### Alertes Configurées
